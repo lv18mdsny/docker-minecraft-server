@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "mxlabs-6779"
+    labels:
+        app: "mxlabs-6779"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 25565
+      targetPort: 25565
+      protocol: TCP
+      name: http
+    selector:
+        app: "mxlabs-6779"
